@@ -114,6 +114,7 @@
 
 
 **단위
+
 px - 픽셀 단위 사이즈
 % - 부모요소의 영향을 받아서 단위를 완성 50%라고하면 부모요소의 사이즈에 50%
 em - 자기 자신의 폰트사이즈에 영향을 받음 nem 하면 영향을 받은 font size에 n을 곱함
@@ -189,3 +190,103 @@ vmin, vmax - max는 가로와 세로중 더 넓은 쪽의 백분율을 적용/ m
     auto - 넘친 부분이 있는 경우만 잘라내고, 스크롤 바를 이용하여 볼 수 있도록 함
 9.opacity - 요소의 투명도 지정
     숫자 - 0부터 1사이의 소숫점 숫자 지정 - 기본값 : 1
+
+
+**글꼴, 문자
+
+1. font - 글자 관련 속성들을 지정 [단축속성]
+    -style - 글자 기울기 지정 - 기본값 : normal
+    -weight - 글자 두께 지정 - 기본값 : normal
+    -size - 글자 크기 지정 - 기본값 : medium(16px)
+    -line-height - 줄 높이 지정 - 기본값 : normal(Reset.css 적용시 1)
+    -family - 글꼴(서체) 지정 - 기본값 : 운영체제(브라우저)에 따라 달라짐
+
+    #단축 속성
+        기울기 두께 크기 / 줄높이 글꼴;
+        font: italic bold 20px / 1.5 "Arial", sans-serif;
+        size, family 필수
+
+    -style
+        normal - 스타일 없음 - 기본값 : normal
+        italic - 이텔릭체(활자) 보통 많이 사용
+        oblique - 기울어진 글자
+    -weight
+        normal - 기본 글자 두께, 400과 동일 - 기본값 : normal (400)
+        bold - 글자 두껍게, 700과 동일
+        bolder - 부모(상위) 요소 보다 더 두껍게(bold보다 두껍다는 개념이 아님)
+        lighter - 부모(상위) 요소 보다 더 얇게
+        숫자 - 100부터 900까지의 100단위 숫자 9개, normal과 bold이외의 두께를 제공하는 글꼴을 위한 설정
+            100 - thin (hairline)
+            200 - extra light (ultra light)
+            300 - light
+            400 - normal
+            500 - medium
+            600 - semi bold (demi bold)
+            700 - bold
+            800 - extra bold (ultra bold)
+            900 - black (heavy)
+
+            #두께가 없는경우 - 100~500 => normal / 600~900 => bold
+    -size
+        단위 - px,em,cm등 단위로 지정 - 기본값 : 16px
+        % - 부모(상위)요소의 비율로 지정
+        xx-small - 가장 작은 크기
+        x-small - 더 작은 크기
+        small - 작은 크기
+        medium - 중간 크기
+        large - 큰 크기
+        x-large - 더 큰 크기
+        xx-large - 가장 큰 크기
+        smaller - 부모 요소 보다 작은 크기
+        larger - 부모 요소 보다 큰 크기
+    -line-height
+        normal - 브라우저의 기본 정의를 사용 (1~1.4) - 기본값 : normal
+        숫자 - 요소 자체 글꼴 크기의 배수로 지정
+        단위 - px,em,cm등 단위로 지정
+        % - 요소 자체 글꼴 크기의 비율로 지정
+    -family
+        글꼴이름 - 글꼴 후보 목록을 지정
+        serif - 글꼴 계열 이름을 지정
+        sans-serif, monospace, cursive, fantasy
+2. color - 문자의 색을 설정
+    -색상 - 문자의 색을 지정
+        색상이름 - 브라우저에서 제공하는 색상의 이름 - red,blue...
+        hex색상코드 - 16진수 색상 (Hexadecimal colors) - #000000
+        rgb - 빛의 삼원색 - rgb(255, 255, 255)
+        rgba - 빛의 삼원색 + 투명도 - rgba(255, 0, 0, .5)
+        hsl - 색상 채도 명도 - hsl(120, 100%, 50%)
+        hsla - 색상 채도 명도 투명도 - hsla(120, 100%, 50%, .3)
+3. text-align - 문자 정렬 방식을 지정
+    left - 왼쪽
+    right - 오른쪽
+    center - 가운데
+    justify - 양쪽 맞춤 (두줄 이상일때, <br>태그사용시 작동X)
+4. text-decoration - 문자의 장식(line 선에대한 장식)을 설정
+    none - 선 없음 - 기본값 : none
+    underline - 밑줄
+    overline - 윗줄
+    line-through - 중앙선
+5. text-indent - (첫줄의) 들여쓰기를 지정 / 음수값 사용가능
+6. letter-spacing - 문자의 자간(굴자 사이 간격)을 설정
+    normal - 단어 사이의 일반 간격 - 기본값 : normal
+    단위 - px, em, cm등 단위로 지정
+7. word-spacing - 단어 사이(띄어쓰기)의 간격을 설정
+    normal - 단어 사이의 일반 간격 - 기본값 : normal
+    단위 - px, em, cm등 단위로 지정
+
+
+**띄움(정렬), 위치
+
+1. float - 요소를 좌우 방향으로 띄움(수평정렬할 수 도 있다)
+    none - 요소 띄움 없음 - 기본값 : none
+    left - 왼쪽으로 띄움
+    right - 오른쪽으로 띄움
+    필수적으로 해제를 해야됨 (clear)
+        형제요소에 clear
+        부모요소에 overflow
+        ***부모요소에 clearfix 클래스 추가하여 해제, display : block해야됨
+    -clear
+        none - 요소 띄움 허용 - 기본값 : none
+        left - 왼쪽 띄움 해제
+        right - 오른쪽 띄움 해제
+        both - 양쪽 모두 띄움 해제

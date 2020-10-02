@@ -462,3 +462,59 @@ vmin, vmax - max는 가로와 세로중 더 넓은 쪽의 백분율을 적용/ m
         column-style - 선의 종류를 지정 - 기본값 : none
         column-color - 선의 색상을 지정 - 기본값 : 요소의 글자 색과 동일
         column-rule: 두께 종류 색상;
+
+
+**Flex
+    #flex-container
+    -display
+        -flex : container자체가 block로 표현됨
+        -inline-flex : container자체가 inline으로 표현됨
+    -flex-flow [단축속성]
+        flex-flow : 주축 여러줄묶음;
+        -flex-dirention - items의 주 축(main-axis)을 설정
+            -row - items를 수평축(왼쪽에서 오른쪽)으로 표시 - 기본값 : row
+            -row-reverse - items를 row의 반대 축으로 표시
+            -column - items를 수직축(위에서 아래)으로 표시됨
+            -column-reverse - items를 column의 반대 축으로 표시
+        -flex-wrap - items의 여러 줄 묶음(줄 바꿈) 설정
+            -nowrap - 모든 items를 여러 줄로 묶지 않음(한 줄에 표시) - 기본값 : nowrap
+            -wrap - items를 여러 줄로 묶음
+            -wrap-reverse - items를 wrap의 역 방향으로 여러 줄로 묶음
+    -main-axis - 주축 / cross-axis - 교차 축
+    -flex-start - 시작점 / flex-end - 끝점
+    -justify-content : 주 축의 정렬 방법을 설정합니다.
+        -flex-start - items를 시작점으로 정렬 - 기본값 : flex-start
+        -flex-end - items를 끝점으로 정렬
+        -center - items를 가운데 정렬
+        -space-between - 시작 item은 시작점에, 마지막 item은 끝점에 정렬되고 나머지 items는 사이에 고르게 정렬
+        -space-around - items를 균등한 여백을 포함하여 정렬
+    -align-content : 교차 축의 정렬 방법을 설정합니다.
+        주의할 점은 flex-wrap 속성을 통해 Items가 여러 줄(2줄 이상)이고 여백이 있을 경우만 사용할 수 있습니다.
+        items가 한 줄일 경우 align-items 속성을 사용하세요.
+        -stretch - Container의 교차 축을 채우기 위해 Items를 늘림 - 기본값 : stretch
+        -flex-start - Items를 시작점(flex-start)으로 정렬
+        -flex-end - Items를 끝점(flex-end)으로 정렬
+        -center - Items를 가운데 정렬
+        -space-between - 시작 Item은 시작점에, 마지막 Item은 끝점에 정렬되고 나머지 Items는 사이에 고르게 정렬됨	
+        -space-around - Items를 균등한 여백을 포함하여 정렬
+    -align-items : 교차 축에서 items의 정렬 방법을 설정합니다.
+        주의할 점은 Items가 flex-wrap을 통해 여러 줄(2줄 이상)일 경우에는 align-content 속성이 우선합니다.
+        따라서 align-items를 사용하려면 align-content 속성을 기본값(stretch)으로 설정해야 합니다.
+        -stretch - Container의 교차 축을 채우기 위해 Items를 늘림 - 기본값 : stretch
+        -flex-start - Items를 각 줄의 시작점(flex-start)으로 정렬
+        -flex-end - Items를 각 줄의 끝점(flex-end)으로 정렬
+        -center - Items를 가운데 정렬
+        -baseline - Items를 문자 기준선에 정렬
+    
+    #Flex-Items
+        -order - Flex Item의 순서를 설정하며
+            숫자 - item의 순서를 설정 - 기본값 : 0
+        -flex - flex-grow, flex-shrink, flex-basis의 단축 속성
+             flex : 증가너비 감소너비 기본너비;
+            -flex-grow - Item의 증가 너비 비율을 설정 - 기본값 : 0
+            -flex-shrink - Item의 감소 너비 비율을 설정 - 기본값 : 1
+            -flex-basis - Item의 (공간 배분 전) 기본 너비 설정 - 기본값 : auto
+        -flex-grow - Flex Item의 증가 너비 비율을 설정
+        -flex-shink - Flex Item의 감소 너비 비율을 설정
+        -flex-basis - Flex Item의 (공간 배분 전) 기본 너비 설정
+        -align-self - 교차 축(cross-axis)에서 Item의 정렬 방법을 설정

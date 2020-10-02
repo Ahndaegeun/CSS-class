@@ -310,3 +310,155 @@ vmin, vmax - max는 가로와 세로중 더 넓은 쪽의 백분율을 적용/ m
 
     -display 수정
         absolute, fixed속성값이 적용된 요소는 display속성의 값이 대부분 block으로 수정됨
+
+
+**배경
+
+1. background - 요소의 배경을 설정 [단축속성]
+    background : 색상 이미지경로 반복 위치 스크롤특성;
+
+    -color - 배경색상 - 기본값 : transparent
+        색상 - 요소의 배경 색상
+        transparent - 투명 - transparent
+    -image - 하나 이상의 배경 이미지 - 기본값 : none
+        none - 이미지 없음 - 기본값 : none
+        url("경로") - 이미지 경로(url)
+    -repeat - 배경 이미지의 반복 - repeat
+        repeat - 배경이미지를 수직,수평으로 반복 - 기본값 : repeat
+        repeat-x - 배경 이미지를 수평으로 반복
+        repeat-y - 배경 이미지를 수직으로 반복
+        no-repeat - 반복 없음
+    -position - 배경 이미지의 위치 - 0 0
+        % - 왼쪽 상단 - 0% 0%, 오른쪽 하단 - 100% 100% - 기본값 : 0% 0%
+        방향 - 방향을 입력하여 위치 설정 - top,bottom,left,right,center
+        단위 - px,em,cm등 단위로 지정
+    -attachment - 배경 이미지의 스크롤 여부(특성) - scroll
+        scroll - 배경 이미지가 요소를 따라서 같이 스크롤 됨 - 기본값 : scroll
+        fixed - 배경 이미지가 뷰포트에 고정되어, 요소와 같이 스크롤 되지 않음
+        local - 요소 내 스크롤 시 이미지가 같이 스크롤 됨
+    -size - 배경 이미지의 사이즈를 설정
+        auto - 배경 이미지가 원래의 크기로 표시됨 - 기본값 : auto
+        단위 - px, em, %등 단위로 지정
+            - width height 형태로 입력 가능(120px 370px)
+            - width만 입력하면 비율에 맞게 지정 됨 
+        cover - 배경 이미지의 크기 비율을 유지하며, 요소의 더 넓은 너비에 맞춰짐
+                이미지가 잘릴수 있음
+        contain - 배경 이미지의 크기 비율을 유지하며, 요소의 더 짧은 너비에 맞춰짐
+                  이미지가 잘리지 않음
+
+
+**전환(transition) - css 속성의 전환 효과를 지정 [단축속성]
+    바뀌기 전 상태에 적용
+    transition : width 1s, background 1s; / transition : 속성이름 지속시간 [타이밍함수 대기시간];
+
+    -property - 전환 효과를 사용할 속성 이름 - 기본값 : all
+        all - 모든 속성에 적용 - 기본값 : all
+        속성 이름 - 전환효과를 사용할 속성 이름
+    -duration - 전환 효과의 지속시간 설정 - 기본값 : 0s
+        시간 - 전환 효과가 지속되는 시간 - 기본값 : 0s
+    -timing-function - 타이밍 함수 지정 - 기본값 : ease
+        ease, linear, ease-in out etc..
+        easing function google search
+    -delay - 전환 효과의 대기시간 설정 - 기본값 : 0s
+        시간 - 전환효과의 대기시간을 설정 - 기본값 : 0s
+
+
+**변환(transform) - 요소의 변환 효과(변형)를 지정
+    transform : 변환함수1 변환함수2 변환함수3 ....;
+    transform : 원근법 이동 크기 회전 기울임;
+
+    -2D 변환 속성값(transform value)
+        -translate(x,y) - 이동 - 단위
+        -scale(x, y) - 크기 - 없음(배수)
+        -rotate(degree) - 회전(각도) - deg
+        -skew(x-deg, y-deg) - 기울임 - deg
+        -matrix(n, n, ,n ,n ,n ,n) - 2차원 변형 효과 - 없음 ##위의 모든 효과를 한번에
+
+    -3D 변환 속성값(transform value)
+        -transrate3d(x, y, z) - 이동 - 단위
+        -transratez(z) - 이동(z축) - 단위
+        -scale3d(x, y, z) - 크기 - 없음(배수)
+        -scalez(z) - 크기(z축) - 없음(배수)
+        -rotate(x, y, z, a) - 회전(x벡터, y벡터, z벡터, 각도) - 없음, deg
+        -perspective(n) - value값 제일 앞부분에 설정 원근법(거리) - 단위
+        -matrix3d(n, n, n, n, n, n, n, n, n, n, n, n, n, n, n, n) - 3차원 변환 효과 - 없음
+
+    -origin - 요소 변환의 기준점을 설정
+        x/y/z - left, right, center, %, 단위 / top, bottom, center, %, 단위 / 기본값 : 50% / 50% / 0
+    -style - 3D변환 요소의 자식 요소도 3D변환을 사용할지 설정
+        flat - 자식 요소의 3D변환을 사용하지 않음 - 기본값 : flat
+        preserve-3D - 자식 요소의 3D변환을 사용함
+    -perspective - 하위 요소를 관찰하는 원근 거리를 설정
+        단위 - px, em, cm등 단위로 지정
+            ##perspective - 관찰 대상의 부모 요소 - 기준점 설정 : perspective-origin
+              transform: perspective() - 관찰 대상 - 기준점 설정 : transform-origin
+              #perspective속성은 관찰 대상의 부모  요소에 적용하여 하위 요소들을 관찰하는 원근 거리를 설정하며,
+                transform: perspective()변환 함수는 관찰 대상에 직접 적용하여 그 대상을 관찰하는 원근 거리를 설정합니다.
+    -perspective-origin - 원근 거리의 기준점을 설정
+        x축 - left, right, center, %, 단위 - 기본값 : 50%
+        y축 - top, bottom, center, %, 단위 - 기본값 : 50%
+    -backface-visivility - 3D변환으로 회전된 요소의 뒷면 숨김을 설정
+        visible - 뒷면 숨기지 않음 - 기본값 : hidden
+        hidden - 뒷면 숨김
+
+    *matrix() - 요소의 2차원 변환(Transform)효과를 지정 / scale(), skew(), translate(), rotate()를 지정
+        브라우저에서는 위의 개별함수를 matrix로 변환 계산되어 적용, 일반적으로는 사용하지 않음
+
+
+**애니메이션(animation) - 요소에 애니메이션을 설정/제어 [단축속성]
+    animation: 애니메이션이름 지속시간 [타이밍함수 대기시간 반복횟수 반복방향 전후상태 재생/정지];
+
+    -name - @keyframes규칙의 이름을 지정 - none
+        none - 애니메이션을 지정하지 않음 - 기본값 : none
+        @keyframes 이름 - 이름이 일치하는 @keyframes 규칙의 애니메이션을 적용
+    -duration - 애니메이션의 지속 시간 설정 - 0s
+        시간 - 지속시간을 설정 - 기본값 : 0s
+    -timing-function - 타이밍 함수 지정 - ease
+        ease, linear등과 같음
+    -delay - 애니메이션의 대기 시간 설정 - 0s
+        시간 - 대기 시간을 설정 - 기본값 : 0s 음수 허용(음수를 입력한 만큼 건너뛰고 재생) / duration보다 뒤에 적어야함
+    -iteration-count - 애니메이션의 반복 횟수 설정 - 1
+        숫자 - 반복 횟수를 설정 - 기본값 : 1
+        infinite - 무한 반복
+    -dirention - 애니메이션의 반복 방향 설정 - normal
+        normal - 정방향만 반복 - 기본값 : normal
+        reverse - 역방향만 반복
+        alternate - 정방향에서 역방향으로 반복 (왕복)
+        alternate-reverse - 역방향에서 정방향으로 반복(왕복)
+    -fill-mode - 애니메이션의 전후 상태(위치)설정 - none
+        none - 기존위치에서 시작 -> 애니메이션 시작 위치로 이동 ->동작 -> 기존 위치에서 끝 - 기본값 : none
+        forwards - 기존위치에서 시작 -> 애니메이션 시작 위치로 이동 -> 동작 -> 애니메이션 끝 위치에서 끝
+        backwards - 애니메이션 시작 위치에서 시작 -> 동작 -> 기존 위치에서 끝
+        both - 애니메이션 시작 위치에서 시작 -> 동작 -> 애니메이션 끝 위치에서 끝
+    -play-state - 애니메이션의 재생과 정지 설정 - running
+        running - 애니메이션을 동작 - 기본값 : running
+        paused - 애니메이션 동작을 정지
+
+    애니메이션 설정 규칙 - 2개 이상의 애니메이션 중간 상태(프레임)을 지정
+    @keyframes name {
+        0% { 속성: 값;}
+        50% { 속성: 값;}
+        100% { 속성: 값;}
+    }
+
+
+**다단(multi-columns) - 일반 블록 레이아웃을 확장하여 여러 텍스트 다단으로 쉽게 정리하며, 가독성 확보
+    1. columns - 다단을 정의 [단축 속성]
+        auto - 브라우저가 단의 너비와 개수를 설정 - 기본값 : auto
+        column-width - 단의 최적 너비를 설정 - 기본값 : auto
+            auto - 브라우저가 단의 너비를 설정 - 기본값 : auto
+            단위 - px,em,cm등 단위로 지정
+            각 단이 줄어들 수 있는 최적 너비를 설정하며,
+                요소의 너비가 가변하여 하나의 단이 최적 너비보다 줄어들 경우 단의 개수가 조정됨
+        column-count - 단의 개수를 설정 - 기본값 : auto
+            auto - 브라우저가 단의 개수를 설정 - 기본값 : auto
+            숫자 - 단의 개수를 설정
+        columns: 너비 개수;
+    2. column-gap - 단과 단 사이의 간격을 설정
+        normal - 브라우저가 단과 단 사이의 간격을 설정(1em) - 기본값 : normal
+        단위 - px, em, cm등 단위로 지정
+    3. column-rule - 단과 단 사이의 (구분)선을 지정 [단축 속성]
+        column-width - 선의 두께를 지정 - 기본값 : medium
+        column-style - 선의 종류를 지정 - 기본값 : none
+        column-color - 선의 색상을 지정 - 기본값 : 요소의 글자 색과 동일
+        column-rule: 두께 종류 색상;

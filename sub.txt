@@ -557,3 +557,10 @@ vmin, vmax - max는 가로와 세로중 더 넓은 쪽의 백분율을 적용/ m
         -column-gap(grid-column-gap) - 각 열과 열 사이의 간격을 지정
             column-gap : 크기;
     -grid-auto-rows - 암시적 행의 크기를 정의
+
+
+
+
+
+    ##Grid-item
+    -gird-column / row

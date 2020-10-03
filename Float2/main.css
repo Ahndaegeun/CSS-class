@@ -1,0 +1,50 @@
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+section {
+    width: 600px;
+    height: 120px;
+    background: #fff;
+    padding: 20px;
+}
+
+section img {
+    width: 44px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 20px;
+}
+
+.title {
+    float: left;
+}
+
+h1 {
+    margin-bottom: 4px;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.title div {
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: #AFB3B9;
+}
+
+.title p {
+    color: #79818B;
+    font-size: 16px;
+}

@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav {
+    width: 540px;
+    border: 2px solid #999;
+    background: #ffffff;
+}
+
+ul li {
+    float: left;
+    font-size: 18px;
+    color: #8492A6;
+    margin-right: 16px;
+    font-weight: bold;
+    border-bottom: 2px solid rgba(0, 0, 0, 0);
+}
+
+ul li a {
+    display: inline-block;
+    padding: 16px 20px;
+}
+
+ul li:nth-child(4) {
+    margin-right: 0;
+}
+
+ul li:hover {
+    color: #2860E1;
+    border-bottom: 2px solid #2860E1;
+}

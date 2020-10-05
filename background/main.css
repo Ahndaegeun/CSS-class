@@ -57,10 +57,6 @@ body {
     cursor: pointer;
 }
 
-.item-info {
-
-}
-
 .info-top {
     margin-bottom: 9px;
     align-items: baseline;
@@ -111,4 +107,28 @@ body {
     font-weight: 500;
     color: #151B26;
     margin-bottom: 16px;
+}
+
+.item-info ul {
+    display: flex;
+}
+
+.item-info ul li {
+    color: #7D858F;
+    font-size: 14px;
+    margin-bottom: 10px;
+    margin-right: 4px;
+}
+
+.item-info ul li:last-child {
+    margin-right: 0;
+}
+
+.middot::after {
+    content: " \00B7";
+}
+
+.options {
+    color: #7D858F;
+    font-size: 14px;
 }

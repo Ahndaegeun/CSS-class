@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    background: #999;
+}
+
+.wrapper {
+    width: 840px;
+    display: flex;
+    padding: 24px;
+    background: #fff;
+    border-radius: 5px;
+    position: relative;
+}
+
+.item-img {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    margin-right: 24px;
+}
+
+.item-img .card-img {
+    text-indent: -9999px;
+    background-image: url("https://github.com/rohjs/bugless-101/blob/master/css-basic/background/assets/img-house.jpg?raw=true");
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 200px;
+    background-size: cover;
+    border-radius: 5px;
+}
+
+.item-img button {
+    border: none;
+    text-indent: -9999px;
+    background-image: url("https://raw.githubusercontent.com/rohjs/bugless-101/cc64c9b6e3b2b5a230bd0b0507c2e2fe9ec0a2e5/css-basic/background/assets/icon-favorite.svg");
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    background-size: cover;
+    top: 12px;
+    left: 12px;
+    border-radius: 50%;
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, .3);
+    outline: none;
+}
+
+.item-img button:hover {
+    cursor: pointer;
+}
+
+.item-info {
+
+}
+
+.info-top {
+    margin-bottom: 9px;
+    align-items: baseline;
+}
+
+.item-info .badge {
+    background: #92174D;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #ffffff;
+    padding: 1px 8px;
+    margin-right: 8px;
+}
+
+.item-info strong {
+    color: #7D858F;
+    font-size: 16px;
+}
+
+.info-top .star-badge::before {
+    content: "";
+    display: inline-block;
+    background-image: url("https://raw.githubusercontent.com/rohjs/bugless-101/cc64c9b6e3b2b5a230bd0b0507c2e2fe9ec0a2e5/css-basic/background/assets/icon-star.svg");
+    width: 13.5px;
+    height: 12.5px;
+    background-size: cover;
+    margin-right: 5px;
+}
+
+.info-top .star-badge {
+    font-size: 16px;
+    columns: #151B26;
+    position: absolute;
+    top: 24px;
+    right: 40px;
+}
+
+.info-top .star-badge::after {
+    content: "(203)";
+    color: #7D858F;
+    font-size: 16px;
+    margin-left: 2px;
+}
+
+.item-info h1 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #151B26;
+    margin-bottom: 16px;
+}

@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.wrapper {
+    width: 360px;
+}
+
+.home-img {
+    margin-bottom: 8px;
+}
+
+.home-img .img {
+    background-image: url("https://github.com/rohjs/bugless-101/blob/master/css-practice/02-dribbble-card/assets/img-work.jpg?raw=true");
+    width: 360px;
+    height: 265px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    position: relative;
+}
+
+.home-img:hover::after {
+    content: "Shortlisted Website";
+    width: 360px;
+    height: 265px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, .375776) 57.03%, #000000 100%);
+    border-radius: 10px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+}
+
+.badge {
+    background-image: url("https://github.com/rohjs/bugless-101/blob/master/css-practice/02-dribbble-card/assets/img-user.jpg?raw=true");
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.footer h1 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: auto;
+}
+
+.coments {
+    margin-right: 11px;
+}
+
+.coments,
+.like {
+    font-size: 16px;
+    font-weight: 500;
+    color: #9E9EA7;
+}
+
+.coments::before {
+    content: "";
+    background-image: url("https://raw.githubusercontent.com/rohjs/bugless-101/cc64c9b6e3b2b5a230bd0b0507c2e2fe9ec0a2e5/css-practice/02-dribbble-card/assets/icon-comment-muted.svg");
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    background-size: cover;
+    margin-right: 5px;
+}
+
+.like::before {
+    content: "";
+    background-image: url("https://raw.githubusercontent.com/rohjs/bugless-101/cc64c9b6e3b2b5a230bd0b0507c2e2fe9ec0a2e5/css-practice/02-dribbble-card/assets/icon-favorite-muted.svg");
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    background-size: cover;
+    margin-right: 5px;
+}
+
+.coments:hover::before {
+    background-image: url("https://raw.githubusercontent.com/rohjs/bugless-101/cc64c9b6e3b2b5a230bd0b0507c2e2fe9ec0a2e5/css-practice/02-dribbble-card/assets/icon-comment-active.svg");
+    cursor: pointer;
+}
+
+.like:hover::before {
+    background-image: url("https://raw.githubusercontent.com/rohjs/bugless-101/cc64c9b6e3b2b5a230bd0b0507c2e2fe9ec0a2e5/css-practice/02-dribbble-card/assets/icon-favorite-active.svg");
+    cursor: pointer;
+}

@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    background: #999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* message */
+
+.wrapper {
+    width: 810px;
+    padding: 8px;
+    background: #fff;
+    display: flex;
+}
+
+.wrapper img {
+    width: 44px;
+    border-radius: 4px;
+    margin-right: 12px;
+}
+
+.name-time {
+    display: flex;
+}
+
+.name-time h1 {
+    color: #212021;
+    font-size: 16px;
+    font-weight: 900;
+    margin-bottom: 4px;
+    margin-right: 8px;
+}
+
+.name-time span {
+    content: "09:00";
+    color: #626162;
+    font-weight: normal;
+    font-size: 14px;
+    position: relative;
+}
+
+.name-time span:hover {
+    cursor: pointer;
+}
+
+.name-time span:hover::before {
+    content: "";
+    position: absolute;
+    border-width: 10px;
+    margin-left: -10px;
+    border-style: solid;
+    top: -10px;
+    left: 15px;
+    border-color: #000 transparent transparent transparent;
+}
+
+.name-time span:hover::after {
+    content: "Today at 09:00:30";
+    display: block;
+    text-align: center;
+    border-radius: 5px;
+    background: #000;
+    color: #fff;
+    font-size: 14px;
+    line-height: 1;
+    width: 120px;
+    padding: 4px 12px; 
+    position: absolute;
+    top: -30px;
+    left: -50px;
+}
+
+.message p {
+    color: #212021;
+    font-size: 16px;
+    font-weight: 500;
+}

@@ -7,6 +7,8 @@ a {
     color: inherit;
 }
 
+/* mobile */
+
 .wrapper {
     width: 375px;
     height: 100vh;
@@ -48,6 +50,10 @@ a {
     padding: 14px 37px;
 }
 
+.main-btn {
+    max-width: 375px;
+}
+
 .main-btn a {
     width: 100%;
     padding: 20px 102px;
@@ -60,4 +66,39 @@ a {
     font-weight: bold;
 }
 
-@media 
+@media screen and (min-width: 375px) {
+    .wrapper {
+        width: 1440px;
+        height: 900px;
+    }
+
+    .container {
+        padding: 0;
+    }
+
+    .info {
+        align-items: center;
+        text-align: center;
+        font-size: 50px;
+    }
+
+    .info div {
+        margin-bottom: 32px;
+    }
+
+    .info a {
+        padding: 16px 38px;
+        font-size: 18px;
+    }
+
+    .main-btn a {
+        max-width: 1440px;
+    }
+
+    .main-btn a {
+        padding: 28px auto;
+        text-align: center;
+        top: 0;
+        bottom: unset;
+    }
+}

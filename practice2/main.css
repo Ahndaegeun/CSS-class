@@ -30,7 +30,10 @@ a {
     content: "Shortlisted Website";
     width: 360px;
     height: 265px;
-    display: block;
+    display: flex;
+    align-items: flex-end;
+    padding: 16px 20px;
+    box-sizing: border-box;
     position: absolute;
     top: 0;
     left: 0;

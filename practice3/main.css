@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.wrapper {
+    padding: 40px;
+    width: 1160px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.show-img {
+    width: 514px;
+    height: 447px;
+    margin-bottom: 53px;
+}
+
+.sub-img {
+    text-align: center;
+}
+
+.sub-img > * {
+    width: 60px;
+    height: 60px;
+    margin-right: 8px;
+}
+
+.sub-img > *:hover {
+    cursor: pointer;
+    opacity: .5;
+}
+
+/* Product-info */
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.product-info h1 {
+    font-size: 36px;
+    letter-spacing: -.03em;
+    color: #1c1c1c;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.product-info .scription {
+    margin-bottom: 20px;
+}
+
+.product-info .scription > * {
+    font-size: 14px;
+    font-weight: 400;
+    color: #969696;
+    letter-spacing: -.02em;
+    margin-right: 37px;
+}
+
+.product-info .scription > *:first-child::before {
+    content: "star***";
+    color: yellow;
+}
+
+.product-info strong {
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: -.03em;
+    color: #1c1c1c;
+    margin-bottom: 24px;
+}
+
+.product-info p {
+    font-size: 15px;
+    color: #545454;
+    margin-bottom: 20px;
+}
+
+.product-info dl {
+    display: flex;
+    padding: 8px 12px;
+}
+
+.product-info dl > dt {
+    font-size: 15px;
+    color: #545454;
+}
+
+.product-info dl > dd {
+    font-size: 15px;
+    font-weight: 600;
+    color: #1c1c1c;
+}
+
+
+
+
+button {
+    background: #1c1c1c;
+    border-radius: 6px;
+    padding: 20px 206px;
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 50;
+}
+
+button:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
